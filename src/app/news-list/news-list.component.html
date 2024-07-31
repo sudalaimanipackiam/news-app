@@ -1,0 +1,25 @@
+<!-- <div *ngIf="articles.length">
+  <div *ngFor="let article of articles" class="news-article">
+    <h2 class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">{{ article.title }}</h2>
+    <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">{{ article.description }}</p>
+    <img [src]="article.urlToImage" width="100%"/>
+    <p class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">{{ article.content }}</p>
+    <a [href]="article.url" target="_blank">Read more</a>
+  </div>
+</div> -->
+
+<div class="container">
+  <h1 class="text-center"> Top News </h1>
+<div  *ngIf="articles.length">
+  <div class="card mb-5 shadow-lg p-3 mb-5 bg-body-tertiary rounded-4" *ngFor="let article of articles" >
+    <h3 class="card-title mb-3 text-center">{{ article.title }}</h3>
+  <img [src]="article.urlToImage"  class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <p class="card-text text-left">{{ article.description }}</p>
+    <p class="card-text text-left">{{ article.content }}</p>
+   <div class="text-center"> <a class="btn btn-primary"[href]="article.url" target="_blank">Read more</a></div>
+  </div>
+</div>
+</div>
+</div>
